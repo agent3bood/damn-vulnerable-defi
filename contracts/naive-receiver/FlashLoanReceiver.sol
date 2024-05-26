@@ -34,10 +34,10 @@ contract FlashLoanReceiver is IERC3156FlashBorrower {
                 revert(0x1c, 0x04)
             }
         }
-        
+
         if (token != ETH)
             revert UnsupportedCurrency();
-        
+
         uint256 amountToBeRepaid;
         unchecked {
             amountToBeRepaid = amount + fee;
