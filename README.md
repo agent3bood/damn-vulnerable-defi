@@ -1,3 +1,12 @@
+## Solutions
+
+1.
+2.
+3.
+4.
+5. The Rewarder: Need to track deposit start time and wait 5 days before rewarding.
+
+
 ![](cover.png)
 
 **A set of challenges to learn offensive security of smart contracts in Ethereum.**
