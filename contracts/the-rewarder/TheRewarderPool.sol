@@ -15,7 +15,7 @@ contract TheRewarderPool {
 
     // Minimum duration of each round of rewards in seconds
     uint256 private constant REWARDS_ROUND_MIN_DURATION = 5 days;
-    
+
     uint256 public constant REWARDS = 100 ether;
 
     // Token deposited into the pool by users
