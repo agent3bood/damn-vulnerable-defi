@@ -2,8 +2,7 @@
 pragma solidity ^0.8.0;
 
 import "../DamnValuableTokenSnapshot.sol";
-import "./ISimpleGovernance.sol"
-;
+import "./ISimpleGovernance.sol";
 /**
  * @title SimpleGovernance
  * @author Damn Vulnerable DeFi (https://damnvulnerabledefi.xyz)
@@ -26,7 +25,7 @@ contract SimpleGovernance is ISimpleGovernance {
 
         if (target == address(this))
             revert InvalidTarget();
-        
+
         if (data.length > 0 && target.code.length == 0)
             revert TargetMustHaveCode();
 
@@ -91,7 +90,7 @@ contract SimpleGovernance is ISimpleGovernance {
      */
     function _canBeExecuted(uint256 actionId) private view returns (bool) {
         GovernanceAction memory actionToExecute = _actions[actionId];
-        
+
         if (actionToExecute.proposedAt == 0) // early exit
             return false;
 

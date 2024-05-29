@@ -62,7 +62,7 @@ contract SelfiePool is ReentrancyGuard, IERC3156FlashLender {
 
         if (!token.transferFrom(address(_receiver), address(this), _amount))
             revert RepayFailed();
-        
+
         return true;
     }
 

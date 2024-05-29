@@ -5,6 +5,7 @@
 3.
 4.
 5. The Rewarder: Need to track deposit start time and wait 5 days before rewarding.
+6. Selfie: take loan, take snapshot, queueAction, executeAction
 
 
 ![](cover.png)
