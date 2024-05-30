@@ -1,0 +1,7 @@
+{
+  "language_overrides": {
+    "JavaScript": {
+      "format_on_save": "off"
+    }
+  }
+}
