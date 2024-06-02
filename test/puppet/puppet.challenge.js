@@ -97,7 +97,7 @@ describe('[Challenge] Puppet', function () {
       const attacker = await ethers.getSigner();
       // TODO I am deploying this as `attacker` whcih does not have any eth, why is this working?
       const playerContract = await (await ethers.getContractFactory('PupperPlayer', attacker))
-        .deploy(attacker.address, player.address, lendingPool.address, token.address, uniswapExchange.address, {value: PLAYER_INITIAL_ETH_BALANCE - (1n * 10n**18n)});
+        .deploy(attacker.address, player.address, lendingPool.address, token.address, uniswapExchange.address, {value: PLAYER_INITIAL_ETH_BALANCE});
 
       await token.connect(player).transfer(playerContract.address, PLAYER_INITIAL_TOKEN_BALANCE);
       await playerContract.connect(attacker).play();
