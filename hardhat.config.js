@@ -8,6 +8,7 @@ module.exports = {
   networks: {
     hardhat: {
       allowUnlimitedContractSize: true,
+      loggingEnabled: true
     },
   },
   tracer: {

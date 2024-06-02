@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
+import "hardhat/console.sol";
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/utils/Address.sol";
 import "../DamnValuableToken.sol";
@@ -31,7 +32,9 @@ contract PuppetPool is ReentrancyGuard {
 
     // Allows borrowing tokens by first depositing two times their value in ETH
     function borrow(uint256 amount, address recipient) external payable nonReentrant {
+        console.log("borrow", amount, msg.value);
         uint256 depositRequired = calculateDepositRequired(amount);
+        console.log("required", depositRequired);
 
         if (msg.value < depositRequired)
             revert NotEnoughCollateral();
