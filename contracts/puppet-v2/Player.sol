@@ -79,15 +79,6 @@ contract PuppetV2Player {
         require(ok);
     }
 
-    function onERC721Received(
-           address operator,
-           address from,
-           uint256 tokenId,
-           bytes calldata data
-       ) external pure returns (bytes4) {
-           return this.onERC721Received.selector;
-       }
-
        function logTokenPrice() private {
            bool ok;
            bytes memory data;
