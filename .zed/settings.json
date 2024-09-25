@@ -1,4 +1,6 @@
 {
+  "remove_trailing_whitespace_on_save": false,
+  "format_on_save": "off",
   "language_overrides": {
     "JavaScript": {
       "format_on_save": "off"
